@@ -12,7 +12,9 @@ def my_softmax(z):
     
     a = np.zeros(z.shape)
     myExp = np.exp(z)
+    mySum = myExp.sum()
     for i in range(z.shape[0]):
+        a[i] = myExp[i]/mySum
 
     ### END CODE HERE ### 
     return a
